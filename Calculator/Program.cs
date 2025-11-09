@@ -18,6 +18,30 @@ class Program
             Console.WriteLine("6. Quit");
             Console.WriteLine("Enter option");
             string choice = Console.ReadLine()?.Trim().ToLower();
+            switch (choice)
+            {
+                case "1":
+                case "add":
+                    break;
+                case "2":
+                case "sub":
+                    break;
+                case "3":
+                case "mul":
+                    break;
+                case "4":
+                case "div":
+                    break;
+                case "5":
+                case "power":
+                    break;
+                case "6":
+                case "quit":
+                    break;
+                default:
+                    Console.WriteLine("invalid choice.Try again \n");
+                    break;
+            }
         }
     }
 }
