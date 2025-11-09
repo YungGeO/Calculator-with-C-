@@ -59,5 +59,22 @@ class Program
 
         return (x, y);
     }
-
+    static void Add()
+    {
+        (double x, double y) = GetTwoNumbers();
+        double result = x + y;
+        Console.WriteLine($"Result: {result}\n");
+    }
+    static void Sub()
+    {
+        (double x, double y) = GetTwoNumbers();
+        double result = x - y;
+        Console.WriteLine($"Result: {result}\n");
+    }
+    static void Mul()
+    {
+        (double x, double y) = GetTwoNumbers();
+        double result = x * y;
+        Console.WriteLine($"Result: {result}\n");
+    }
 }
