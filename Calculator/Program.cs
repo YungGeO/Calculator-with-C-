@@ -22,18 +22,23 @@ class Program
             {
                 case "1":
                 case "add":
+                    Add();
                     break;
                 case "2":
                 case "sub":
+                    Sub();
                     break;
                 case "3":
                 case "mul":
+                    Mul();
                     break;
                 case "4":
                 case "div":
+                    Div();
                     break;
                 case "5":
                 case "power":
+                    Pow();
                     break;
                 case "6":
                 case "quit":
@@ -44,4 +49,15 @@ class Program
             }
         }
     }
+    static (double, double) GetTwoNumbers()
+    {
+        Console.Write("Enter first number: ");
+        double x = double.Parse(Console.ReadLine());
+
+        Console.Write("Enter second number: ");
+        double y = double.Parse(Console.ReadLine());
+
+        return (x, y);
+    }
+
 }
