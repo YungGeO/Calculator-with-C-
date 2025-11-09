@@ -4,7 +4,7 @@ class Program
     static void Main()
     {
         Console.WriteLine("What is your name kind sir");
-        string name = Console.ReadLine();
+        string? name = Console.ReadLine();
         Console.WriteLine($"welcome {name}");
         bool stopCal = true;
         while (stopCal)
@@ -17,7 +17,7 @@ class Program
             Console.WriteLine("5. Power");
             Console.WriteLine("6. Quit");
             Console.WriteLine("Enter option");
-            string choice = Console.ReadLine()?.Trim().ToLower();
+            string? choice = Console.ReadLine()?.Trim().ToLower();
             switch (choice)
             {
                 case "1":
@@ -53,11 +53,18 @@ class Program
     }
     static (double, double) GetTwoNumbers()
     {
+        double x, y;
         Console.Write("Enter first number: ");
-        double x = double.Parse(Console.ReadLine());
+        while (!double.TryParse(Console.ReadLine(), out x))
+        {
+            Console.Write("Invalid input! Enter a valid number: ");
+        }
 
         Console.Write("Enter second number: ");
-        double y = double.Parse(Console.ReadLine());
+        while (!double.TryParse(Console.ReadLine(), out y))
+        {
+            Console.Write("Invalid input! Enter a valid number: ");
+        }
 
         return (x, y);
     }
