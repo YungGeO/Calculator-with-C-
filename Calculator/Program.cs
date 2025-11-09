@@ -77,4 +77,15 @@ class Program
         double result = x * y;
         Console.WriteLine($"Result: {result}\n");
     }
+    static void Div()
+    {
+        (double x, double y) = GetTwoNumbers();
+        if (y == 0)
+        {
+            Console.WriteLine("Can not divide by zero ,give another number! \n");
+            return;
+        }
+        double result = x / y;
+        Console.WriteLine($"Result: {result}\n");
+    }
 }
