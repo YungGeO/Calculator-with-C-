@@ -42,6 +42,7 @@ class Program
                     break;
                 case "6":
                 case "quit":
+
                     break;
                 default:
                     Console.WriteLine("invalid choice.Try again \n");
@@ -87,5 +88,11 @@ class Program
         }
         double result = x / y;
         Console.WriteLine($"Result: {result}\n");
+    }
+    static void Pow()
+    {
+        (double x, double y) = GetTwoNumbers();
+        double result = Math.Pow(x, y);
+        Console.WriteLine($"Result: {x}^{y} = {result}\n");
     }
 }
