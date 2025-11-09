@@ -42,7 +42,8 @@ class Program
                     break;
                 case "6":
                 case "quit":
-
+                    stopCal = false;
+                    Console.WriteLine("Exiting program....");
                     break;
                 default:
                     Console.WriteLine("invalid choice.Try again \n");
