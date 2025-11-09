@@ -1,7 +1,7 @@
 ﻿using System;
 class Program
 {
-    static void Main()
+    static void Main(string[] args)
     {
         Console.WriteLine("What is your name kind sir");
         string? name = Console.ReadLine();
